@@ -1,0 +1,35 @@
+{
+  "name": "skeleton",
+  "version": "1.0.0",
+  "description": "project skeleton",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./source_server.js"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.10.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.0",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
