@@ -16,6 +16,10 @@ const cleaningOptions = {
     root: require("path").resolve("./")
 };
 
+const resolve = (dir) => {
+    return path.join(__dirname, '../', dir);
+};
+
 
 module.exports = {
 
@@ -36,7 +40,7 @@ module.exports = {
 
     resolve: {
         modules: [
-            "assets/src",
+            resolve("assets/src"),
             "node_modules",
         ],
         extensions: [".js", ".jsx"]
