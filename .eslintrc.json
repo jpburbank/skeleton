@@ -1,0 +1,51 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "globals" : {
+        "require": true,
+        "module": true,
+        "arguments": true,
+        "test": true,
+        "expect": true,
+        "describe": true,
+        "it": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": "off",
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "warn",
+        "no-unused-vars": "warn",
+        "no-debugger": "warn",
+        "no-case-declarations": "off",
+        "no-unsafe-negation": "off",
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
+        "react/prop-types": "off"
+    }
+}
