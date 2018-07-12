@@ -4,7 +4,7 @@ var BundleTracker = require("webpack-bundle-tracker");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 
 const absUrl = "/Users/johnpaulburbank/hoistbin/contracting/skeleton";
@@ -19,7 +19,7 @@ const cleaningOptions = {
 
 module.exports = {
 
-    mode: "development",
+    mode: "production",
     
     context: absUrl,
     
@@ -57,7 +57,7 @@ module.exports = {
         new BundleTracker({
             filename: "./webpack/webpack-stats.json"
         }),
-        new HtmlWebpackHarddiskPlugin()
+        new UglifyJSPlugin()
     ],
     
     module: {

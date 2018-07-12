@@ -4,7 +4,9 @@
   "description": "project skeleton",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "node ./source_server.js"
+    "live": "node ./source_server.js", 
+    "dev": "./node_modules/.bin/webpack --config ./webpack/config.dev.js --display verbose",
+    "prod": "./node_modules/.bin/webpack --config ./webpack/config.prod.js --display verbose"
   },
   "author": "",
   "license": "",
