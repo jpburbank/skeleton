@@ -11,8 +11,12 @@ import rootReducer from "reducers/root_reducer";
 import {potentialInitialAsyncGet} from "actions/actions";
 
 
-let emptyState = {};
-const store = createStore(rootReducer, emptyState, applyMiddleware(thunk));
+// let emptyState = {
+//     someValues: {
+//         value: 0
+//     }
+// };
+const store = createStore(rootReducer, {}/*emptyState*/, applyMiddleware(thunk));
 
 store
     .dispatch(potentialInitialAsyncGet())

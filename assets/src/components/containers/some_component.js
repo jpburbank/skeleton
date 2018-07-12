@@ -5,8 +5,12 @@ import SomeComponent from "components/someBaseComponentGrouping/some_component";
 
 
 const mapStateToProps = (state, ownProps) => {
+    let number = 0;
+    if (state.someValues && state.someValues.value) {
+        number = state.someValues.value;
+    }
     return {
-        aNumber: 4
+        aNumber: number
     };
 };
 

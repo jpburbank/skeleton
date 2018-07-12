@@ -1,4 +1,4 @@
-import actionTypes from "constants/action_types";
+import {actionTypes} from "constants/action_types";
 import {deepCopy} from "utils/copy";
 
 
@@ -9,13 +9,14 @@ let changeValue = (previousState, value) => {
 };
 
 let initialState = {
-    value: undefined
+    value: 0
 };
 
 let someReducer = (previousState = initialState, action) => {
     switch(action.type) {
         case (actionTypes.SAVE_VALUE):
-            return changeValue(action.value);
+        case (actionTypes.LOAD_SUCCESS):
+            return changeValue(previousState, action.value);
         default:
             return previousState;
     }

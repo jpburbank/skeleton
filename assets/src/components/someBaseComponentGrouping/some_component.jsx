@@ -23,7 +23,7 @@ class SomeComponent extends React.Component {
     render() {
         let someStaticValue = 9;
         return (<div
-            onClick={this.handleSomeUserInteractionThatEffectsTheStore.bind(this, someStaticValue)}>Hi! {this.props.aNumber}</div>);
+            onClick={this.handleSomeUserInteractionThatEffectsTheStore.bind(this, someStaticValue)}>Click me! {this.props.aNumber}</div>);
     }
 }
 
